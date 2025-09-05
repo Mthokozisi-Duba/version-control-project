@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #1e2936;
+    --secondary-color: #304057;
+    --background-color: #0e162a;
+    --text-color: #fefefe;
+    --nav-bg-color: #101726;
+    --nav-text-color: #fefefe;
+    --button-bg-color: #145cfb;
+    --button-text-color: #dddbdb;
+    --input-bg-color: #232b3e;
+    --input-text-color: #e0e0e0;
+    --avatar-border-color: #304057;
+    --nav-font: 'Inter', 'Segoe UI', Arial, sans-serif;
+    --nav-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --splash-gradient-start: #06070a;
+    --splash-gradient-end: #253142;
+    --splash-card-bg: #181c23;
+    --splash-accent-green: #00e676;
+    --splash-accent-orange: #ff9800;
+    --splash-accent-purple: #ab47bc;
+    --splash-accent-blue: #00bcd4;
+}

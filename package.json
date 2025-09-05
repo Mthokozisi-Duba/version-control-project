@@ -1,5 +1,5 @@
 {
-	"name": "imy220-2025-prac4",
+	"name": "Night Owl Dev",
 	"version": "1.0.0",
 	"scripts": {
 		"build": "webpack && babel backend/src/server.js -d dist",
@@ -7,6 +7,7 @@
 		"watch": "webpack -w"
 	},
 	"dependencies": {
+		"bootstrap": "^5.3.8",
 		"express": "^5.1.0",
 		"path": "^0.12.7",
 		"prop-types": "^15.8.1",
@@ -19,8 +20,11 @@
 		"@babel/cli": "^7.24.8",
 		"@babel/core": "^7.25.2",
 		"@babel/preset-env": "^7.25.3",
-		"@babel/preset-react": "^7.24.7",
+		"@babel/preset-react": "^7.27.1",
 		"babel-loader": "^10.0.0",
+		"css-loader": "^7.1.2",
+		"file-loader": "^6.2.0",
+		"style-loader": "^4.0.0",
 		"webpack": "^5.93.0",
 		"webpack-cli": "^6.0.1"
 	}

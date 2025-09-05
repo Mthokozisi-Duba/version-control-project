@@ -1,0 +1,60 @@
+.navbar-custom {
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    box-shadow: var(--nav-shadow);
+    padding: 0.5rem 2rem;
+}
+
+.navbar-custom .navbar-brand {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar-custom .nav-link {
+    color: var(--nav-text-color) !important;
+    font-weight: 600;
+    margin-right: 1rem;
+    transition: color 0.2s;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--button-bg-color) !important;
+}
+
+.navbar-custom .form-control {
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    margin-right: 1rem;
+}
+
+.navbar-custom .form-control::placeholder {
+    color: var(--input-text-color);
+    opacity: 0.7;
+}
+
+.navbar-custom .navbar-avatar {
+    border: 2px solid var(--avatar-border-color);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    margin-right: 0.5rem;
+}
+
+.navbar-custom .navbar-user {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.navbar-custom .navbar-icon {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+}

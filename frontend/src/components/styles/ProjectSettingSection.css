@@ -1,0 +1,34 @@
+/* ProjectSettingSection styles */
+.project-setting-section {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 1.2rem 1rem 1rem 1rem;
+    color: var(--text-color);
+}
+.project-setting-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.project-setting-btn {
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.project-setting-btn.delete {
+    background: var(--button-bg-color);
+}
+.project-setting-btn.add {
+    background: var(--button-bg-color);
+}
+.project-setting-btn.edit {
+    background: var(--button-bg-color);
+}

@@ -1,0 +1,107 @@
+/* FeedProject card wireframe styles */
+.feed-project-card {
+    background: var(--secondary-color);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 1.2rem 1rem 1rem 1rem;
+    width: 240px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    color: var(--text-color);
+}
+.feed-project-image {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 0.7rem;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feed-project-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.feed-project-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+.feed-project-desc {
+    font-size: 0.95rem;
+    color: #bfc8d6;
+    margin-bottom: 0.7rem;
+}
+.feed-project-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+.feed-project-author {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.feed-project-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #6b7ca7;
+    display: inline-block;
+}
+.feed-project-author-name {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+.feed-project-date {
+    font-size: 0.85rem;
+    color: #bfc8d6;
+}
+.feed-project-footer {
+    margin-top: 0.2rem;
+}
+.feed-project-category {
+    font-size: 0.85rem;
+    color: #bfc8d6;
+    background: #232b3e;
+    border-radius: 6px;
+    padding: 0.2rem 0.7rem;
+    display: inline-block;
+}
+.project-main {
+    background: var(--background-color);
+    min-height: 100vh;
+    color: var(--text-color);
+    padding: 2.5rem 2rem;
+}
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background: var(--secondary-color);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.project-nav {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1rem;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.project-about-card, .project-team-card, .project-commits-card, .project-readme-card {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 1.2rem 1rem 1rem 1rem;
+    color: var(--text-color);
+}

@@ -1,0 +1,13 @@
+/* ProjectCommitSection styles */
+.project-commit-section {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 1.2rem 1rem 1rem 1rem;
+    color: var(--text-color);
+}
+.project-commit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}

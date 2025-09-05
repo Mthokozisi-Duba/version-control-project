@@ -1,0 +1,69 @@
+/* Signup Page Theme Styles */
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+}
+
+.signup-form {
+  background: var(--secondary-color);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  color: var(--text-color);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--button-bg-color);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.signup-form label {
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 6px;
+}
+
+.signup-form input {
+  border-radius: 8px;
+  border: 1px solid var(--input-bg-color);
+  padding: 12px;
+  font-size: 1rem;
+  background: var(--input-bg-color);
+  color: var(--input-text-color);
+}
+
+.signup-form button {
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.signup-form button:hover {
+  background: var(--splash-gradient-end);
+}
+
+.signup-link {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  color: var(--button-bg-color);
+  text-decoration: underline;
+  font-size: 0.95rem;
+}

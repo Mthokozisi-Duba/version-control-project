@@ -1,0 +1,242 @@
+/* Project page wireframe styles */
+.project-main {
+    background: var(--background-color);
+    min-height: 100vh;
+    color: var(--text-color);
+    padding: 2.5rem 2rem;
+}
+.project-header-section {
+    margin-bottom: 1.2rem;
+}
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background: var(--secondary-color);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.project-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: #232b3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-header-info {
+    flex: 1;
+}
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+.project-desc {
+    font-size: 1rem;
+    color: #bfc8d6;
+    margin-bottom: 0.2rem;
+}
+.project-updated {
+    font-size: 0.85rem;
+    color: #bfc8d6;
+}
+.project-clone-btn {
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.project-clone-btn:hover {
+    background: var(--secondary-color);
+}
+.project-nav {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1rem;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.project-nav-btn {
+    background: none;
+    color: #bfc8d6;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.4rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.project-nav-btn.active, .project-nav-btn:hover {
+    background: #232b3e;
+    color: var(--text-color);
+}
+.project-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.project-sidebar {
+    flex: 1;
+    min-width: 220px;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.project-about-card, .project-team-card, .project-commits-card, .project-readme-card {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 1.2rem 1rem 1rem 1rem;
+    color: var(--text-color);
+}
+.project-about-card h2, .project-team-card h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.project-about-meta {
+    font-size: 0.95rem;
+    color: #bfc8d6;
+    margin-bottom: 0.7rem;
+}
+.project-tags {
+    margin-top: 0.7rem;
+}
+.project-tag-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.3rem;
+}
+.project-tag {
+    background: #232b3e;
+    color: #bfc8d6;
+    border-radius: 6px;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+.project-team-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.project-team-card li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.project-team-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #6b7ca7;
+    display: inline-block;
+}
+.project-team-name {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+.project-team-role {
+    font-size: 0.85rem;
+    color: #bfc8d6;
+}
+.project-main-content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.project-commits-card {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 1.2rem 1rem 1rem 1rem;
+    color: var(--text-color);
+}
+.project-commits-header {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+.project-commits-search {
+    background: var(--input-bg-color);
+    color: var(--input-text-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    flex: 1;
+}
+.project-commits-add {
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.project-commits-add:hover {
+    background: var(--secondary-color);
+}
+.project-file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.project-file-row {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: #232b3e;
+    border-radius: 6px;
+    padding: 0.3rem 0.7rem;
+    font-size: 1rem;
+    color: #bfc8d6;
+}
+.project-file-icon {
+    color: #6b7ca7;
+    font-size: 1.2rem;
+}
+.project-file-name {
+    flex: 1;
+}
+.project-file-updated {
+    font-size: 0.85rem;
+    color: #bfc8d6;
+}
+.project-readme-card {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 1.2rem 1rem 1rem 1rem;
+    color: var(--text-color);
+}
+.project-readme-card h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.project-readme-content {
+    font-size: 1rem;
+    color: #bfc8d6;
+    white-space: pre-line;
+}

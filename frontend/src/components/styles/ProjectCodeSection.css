@@ -1,0 +1,6 @@
+/* ProjectCodeSection styles */
+.project-code-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}

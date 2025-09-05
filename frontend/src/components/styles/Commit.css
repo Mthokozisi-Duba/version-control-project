@@ -1,0 +1,18 @@
+/* Commit component styles */
+.commit-row {
+    background: #232b3e;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+.commit-message {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+.commit-meta {
+    font-size: 0.9rem;
+    color: #bfc8d6;
+    display: flex;
+    gap: 1rem;
+}
