@@ -1,16 +1,33 @@
+/*
+Name: Mthokozisi Duba
+Student number: u24690059
+Position: 51
+*/
+
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styles/ProjectDisplay.css";
 
 function ProjectDisplay({ project }) {
     return (
-        <Link to={`/project/${project.name}`} style={{ textDecoration: "none" }}>
-            <div className="project-display-card card mb-3 p-3" style={{ background: "var(--secondary-color)", color: "var(--text-color)" }}>
-                <div className="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h5 className="mb-1">{project.name}</h5>
-                        <div className="small">Created: {project.dateCreated}</div>
-                        <div className="small">Last Updated: {project.lastUpdated}</div>
+        <Link to={`/project/${project._id}`} className="no-underline">
+            <div className="card hover:border-accent transition-colors">
+                <div className="flex justify-between items-start">
+                    <div className="flex-1">
+                        <h5 className="text-lg font-bold text-primary mb-2">{project.title}</h5>
+                        <p className="text-sm text-text-secondary mb-2">{project.description}</p>
+                        <div className="flex gap-4 text-sm text-text-secondary">
+                            <div>Created: {new Date(project.createdAt).toLocaleDateString()}</div>
+                            <div>Updated: {new Date(project.updatedAt).toLocaleDateString()}</div>
+                        </div>
+                        {project.tags && project.tags.length > 0 && (
+                            <div className="flex flex-wrap gap-2 mt-3">
+                                {project.tags.map(tag => (
+                                    <span key={tag} className="px-2 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

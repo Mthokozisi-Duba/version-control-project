@@ -1,4 +1,4 @@
-# Mthokozisi Duba u24690059 practical 1
+# Mthokozisi Duba u24690059 project
 
 FROM node:22
 

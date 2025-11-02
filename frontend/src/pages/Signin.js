@@ -1,14 +1,21 @@
+/*
+Name: Mthokozisi Duba
+Student number: u24690059
+Position: 51
+*/
+
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./styles/Signin.css";
+import { Link, useNavigate } from "react-router-dom";
+import { authApi } from "../api/authApi";
 
 function Signin() {
+    const navigate = useNavigate();
     const [form, setForm] = useState({
-        username: "",
-        email: "",
+        usernameOrEmail: "",
         password: ""
     });
     const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
 
     function userNameCheck(username) {
         return username.length >= 3;
@@ -26,48 +33,71 @@ function Signin() {
         setForm({ ...form, [e.target.name]: e.target.value });
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        if (!userNameCheck(form.username)) {
-            setError("Username must be at least 3 characters long.");
-            return;
-        }
-        if (!emailCheck(form.email)) {
-            setError("Please enter a valid email.");
-            return;
-        }
-        if (!passwordCheck(form.password)) {
-            setError("Password must be at least 8 characters, include uppercase, lowercase, a number, and a special character.");
-            return;
-        }
         setError("");
+        setLoading(true);
+        
+        try {
+            await authApi.login(form.usernameOrEmail, form.password);
+            navigate('/home'); // Redirect to home after successful login
+        } catch (err) {
+            setError(err.message || "Login failed. Please check your credentials.");
+        } finally {
+            setLoading(false);
+        }
     }
 
     return (
-        <main className="signin-container">
-            <form className="signin-form" onSubmit={handleSubmit}>
-                <h2 className="signin-title">Sign In</h2>
+        <main className="min-h-screen gradient-primary flex items-center justify-center p-4">
+            <form className="card max-w-md w-full" onSubmit={handleSubmit}>
+                <h2 className="text-center mb-6 text-text-primary">Sign In</h2>
 
-                <div className="form-group">
-                    <label htmlFor="username" className="form-label">Username</label>
-                    <input type="text" id="username" name="username" className="form-control w-100" required value={form.username} onChange={handleChange} />
+                <div className="mb-4">
+                    <label htmlFor="usernameOrEmail" className="block text-sm font-medium mb-2 text-text-primary">
+                        Username or Email
+                    </label>
+                    <input 
+                        type="text" 
+                        id="usernameOrEmail" 
+                        name="usernameOrEmail" 
+                        className="input" 
+                        required 
+                        value={form.usernameOrEmail} 
+                        onChange={handleChange}
+                        disabled={loading}
+                    />
                 </div>
 
-                <div className="form-group">
-                    <label htmlFor="email" className="form-label">Email</label>
-                    <input type="email" id="email" name="email" className="form-control w-100" required value={form.email} onChange={handleChange} />
+                <div className="mb-6">
+                    <label htmlFor="password" className="block text-sm font-medium mb-2 text-text-primary">
+                        Password
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        className="input" 
+                        required 
+                        value={form.password} 
+                        onChange={handleChange}
+                        disabled={loading}
+                    />
                 </div>
 
-                <div className="form-group">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" id="password" name="password" className="form-control w-100" required value={form.password} onChange={handleChange} />
-                </div>
+                <button type="submit" className="btn btn-primary w-full mb-4" disabled={loading}>
+                    {loading ? 'Signing in...' : 'Sign in'}
+                </button>
 
-                <button type="submit" className="btn w-100">Sign in</button>
+                {error && (
+                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                        {error}
+                    </div>
+                )}
 
-                <div id="signin-error" className="text-danger">{error}</div>
-
-                <Link to="/signup" className="signin-link">Don't have an account? Sign up</Link>
+                <Link to="/signup" className="text-center block text-accent hover:text-accent-dark">
+                    Don't have an account? Sign up
+                </Link>
             </form>
         </main>
     );

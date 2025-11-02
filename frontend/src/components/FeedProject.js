@@ -1,3 +1,9 @@
+/*
+Name: Mthokozisi Duba
+Student number: u24690059
+Position: 51
+*/
+
 import React from "react";
 import { Link } from "react-router-dom";
 import projectImg from "../assets/project.jpeg";
@@ -8,26 +14,33 @@ function FeedProject({
     description,
     author,
     category,
-    date
+    date,
+    id
 }) {
+    const formattedDate = new Date(date).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+    });
+
     return (
-        <Link to={`/project/${name}`} style={{ textDecoration: "none" }}>
-            <div className="feed-project-card">
-                <div className="feed-project-image">
-                    <img src={image} alt={name} className="feed-project-img" style={{ width: "100%", height: "120px", objectFit: "cover", borderRadius: "12px" }} />
+        <Link to={`/project/${id}`} className="no-underline">
+            <div className="card hover:shadow-lg transition-shadow duration-300">
+                <div className="mb-4">
+                    <img src={image} alt={name} className="w-full h-32 object-cover rounded-lg" />
                 </div>
-                <div className="feed-project-body">
-                    <h3 className="feed-project-title">{name}</h3>
-                    <p className="feed-project-desc">{description}</p>
-                    <div className="feed-project-meta">
-                        <div className="feed-project-author">
-                            <span className="feed-project-avatar"></span>
-                            <span className="feed-project-author-name">{author}</span>
+                <div>
+                    <h3 className="text-xl font-bold text-primary mb-2 hover:text-accent transition-colors">{name}</h3>
+                    <p className="text-text-secondary mb-4 line-clamp-2">{description}</p>
+                    <div className="flex justify-between items-center mb-3">
+                        <div className="flex items-center gap-2">
+                            <span className="w-8 h-8 rounded-full bg-gradient-primary"></span>
+                            <span className="text-sm font-medium text-primary">{author}</span>
                         </div>
-                        <span className="feed-project-date">{date}</span>
+                        <span className="text-xs text-text-secondary">{formattedDate}</span>
                     </div>
-                    <div className="feed-project-footer">
-                        <span className="feed-project-category">{category}</span>
+                    <div>
+                        <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent">{category}</span>
                     </div>
                 </div>
             </div>

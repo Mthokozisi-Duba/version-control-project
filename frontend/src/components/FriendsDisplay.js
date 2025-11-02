@@ -1,16 +1,37 @@
+/*
+Name: Mthokozisi Duba
+Student number: u24690059
+Position: 51
+*/
+
 import React from "react";
-import "./styles/FriendsDisplay.css";
 
 function FriendsDisplay({ friends }) {
+    if (!friends || friends.length === 0) {
+        return (
+            <div className="border-t border-gray-200 pt-4">
+                <h4 className="text-lg font-bold text-primary mb-3">Friends</h4>
+                <p className="text-sm text-text-secondary">No friends yet</p>
+            </div>
+        );
+    }
+
     return (
-        <div className="friends-display-card card p-3" style={{ background: "var(--secondary-color)", color: "var(--text-color)" }}>
-            <h4 className="mb-2">Friends</h4>
-            <ul className="list-group list-group-flush">
-                {friends.map(friend => (
-                    <li key={friend.Userid} className="list-group-item" style={{ background: "var(--secondary-color)", color: "var(--text-color)" }}>
-                        <span className="fw-bold">{friend.username}</span>
-                    </li>
-                ))}
+        <div className="border-t border-gray-200 pt-4">
+            <h4 className="text-lg font-bold text-primary mb-3">Friends ({friends.length})</h4>
+            <ul className="space-y-2">
+                {friends.map((friend, index) => {
+                    // Handle both ObjectId and string IDs
+                    const friendId = friend._id?.toString() || friend.id || friend.toString() || index;
+                    const username = friend.username || 'Unknown User';
+                    
+                    return (
+                        <li key={friendId} className="flex items-center gap-2 p-2 rounded hover:bg-secondary/50 transition-colors">
+                            <span className="w-8 h-8 rounded-full bg-gradient-primary"></span>
+                            <span className="font-medium text-primary">{username}</span>
+                        </li>
+                    );
+                })}
             </ul>
         </div>
     );

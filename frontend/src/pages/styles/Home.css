@@ -101,6 +101,23 @@
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    min-height: 200px;
+}
+
+.loading-message, .error-message, .no-projects-message {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.error-message {
+    color: #ff4444;
+}
+
+.no-projects-message {
+    color: #bfc8d6;
 }
 .home-stats {
     flex: 1;
